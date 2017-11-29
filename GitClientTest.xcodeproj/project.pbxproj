@@ -202,8 +202,8 @@
 		43D4FA1D1FCF454700241E35 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				430CE4981FCE8B930078804F /* DetailViewController.m */,
 				430CE4971FCE8B930078804F /* DetailViewController.h */,
+				430CE4981FCE8B930078804F /* DetailViewController.m */,
 				430CE4941FCE8B930078804F /* MasterViewController.h */,
 				430CE4951FCE8B930078804F /* MasterViewController.m */,
 			);

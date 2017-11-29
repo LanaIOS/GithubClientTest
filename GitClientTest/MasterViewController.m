@@ -170,6 +170,8 @@ static const NSUInteger kCellsCountBeforeReq = 5;
     
 }
 
+#pragma mark - Refresh
+
 - (void)refresh:(id)sender {
     
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
