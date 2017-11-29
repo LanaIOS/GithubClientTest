@@ -29,8 +29,7 @@ static const NSUInteger kCellsCountBeforeReq = 5;
 @property (strong, nonatomic) NSMutableArray *results;
 @property (strong, nonatomic) GCDataController *dataController;
 @property (strong, nonatomic) GTDataRequest *request;
-
-@property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) UIRefreshControl *customRefreshControl;
 @property (strong, nonatomic) UIActivityIndicatorView *activityView;
 
 @end
@@ -91,13 +90,17 @@ static const NSUInteger kCellsCountBeforeReq = 5;
         
         [self presentViewController:alertController animated:YES completion:nil];
         
-        self.refreshControl = [[UIRefreshControl alloc] init];
-        [self.refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
-        [self.view addSubview:self.refreshControl];
         
     } else if ([self.dataController getAllRepos].count == 0 && networkStatus != NotReachable) {
         
         [self.activityView startAnimating];
+    }
+    
+    if (networkStatus == NotReachable && [self.dataController getAllRepos].count == 0) {
+        self.customRefreshControl = [[UIRefreshControl alloc] init];
+        [self.customRefreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+//        [self.customRefreshControl performSelector:@selector(endRefreshing) withObject:nil afterDelay:0.05];
+        [self.view addSubview:self.customRefreshControl];
     }
 }
 
@@ -168,7 +171,7 @@ static const NSUInteger kCellsCountBeforeReq = 5;
 }
 
 - (void)refresh:(id)sender {
-    [self.refreshControl endRefreshing];
+    
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
@@ -181,18 +184,18 @@ static const NSUInteger kCellsCountBeforeReq = 5;
                                    style:UIAlertActionStyleDefault
                                    handler:^(UIAlertAction *action)
                                    {
-                                       
+                                       [self.customRefreshControl endRefreshing];
                                    }];
         [alertController addAction:okAction];
         
         [self presentViewController:alertController animated:YES completion:nil];
+    
     } else if ([self.dataController getAllRepos].count == 0 && networkStatus != NotReachable) {
         [self getElementsFromBorder:0];
-
+        [self.customRefreshControl endRefreshing];
         [self.activityView startAnimating];
     }
 
 }
-
 
 @end

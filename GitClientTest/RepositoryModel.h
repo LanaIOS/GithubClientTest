@@ -12,7 +12,7 @@
 
 @interface RepositoryModel : JSONModel
 
-@property (nonatomic) NSInteger id;
+@property (nonatomic) int id;
 @property (nonatomic) NSString *full_name;
 @property (nonatomic) UserDetailsModel *owner;
 
