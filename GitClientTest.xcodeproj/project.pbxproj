@@ -24,7 +24,7 @@
 		430CE4D81FCEA6E90078804F /* RepositoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 430CE4D71FCEA6E90078804F /* RepositoryModel.m */; };
 		430CE4DB1FCEA7020078804F /* UserDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 430CE4DA1FCEA7020078804F /* UserDetailsModel.m */; };
 		43D4FA161FCEF2EE00241E35 /* RepositoryMO+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4FA101FCEF2EE00241E35 /* RepositoryMO+CoreDataProperties.m */; };
-		43D4FA1C1FCF262100241E35 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4FA1B1FCF262100241E35 /* Reachability.m */; };
+		43D4FA261FCF47E900241E35 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D4FA251FCF47E900241E35 /* Reachability.m */; };
 		9D1DD595AFE625B184A71DB8 /* libPods-GitClientTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 508EE5DD6AD3224F336D2A72 /* libPods-GitClientTest.a */; };
 		F3C3AA240A95862C7503C7E7 /* libPods-GitClientTestUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C73ED46B5839E9088F112AE /* libPods-GitClientTestUITests.a */; };
 /* End PBXBuildFile section */
@@ -83,8 +83,8 @@
 		43D4FA0E1FCEF2EE00241E35 /* RepositoryMO+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RepositoryMO+CoreDataClass.m"; sourceTree = "<group>"; };
 		43D4FA0F1FCEF2EE00241E35 /* RepositoryMO+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RepositoryMO+CoreDataProperties.h"; sourceTree = "<group>"; };
 		43D4FA101FCEF2EE00241E35 /* RepositoryMO+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RepositoryMO+CoreDataProperties.m"; sourceTree = "<group>"; };
-		43D4FA1A1FCF261800241E35 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../../../../Downloads/Reachability/Reachability/Reachability.h; sourceTree = "<group>"; };
-		43D4FA1B1FCF262100241E35 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../../../../Downloads/Reachability/Reachability/Reachability.m; sourceTree = "<group>"; };
+		43D4FA241FCF47E000241E35 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		43D4FA251FCF47E900241E35 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		508EE5DD6AD3224F336D2A72 /* libPods-GitClientTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitClientTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C73ED46B5839E9088F112AE /* libPods-GitClientTestUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitClientTestUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B774A2E64BE1BBD7B02F4A08 /* libPods-GitClientTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitClientTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,8 +165,8 @@
 				430CE4A21FCE8B930078804F /* Info.plist */,
 				430CE49D1FCE8B930078804F /* Assets.xcassets */,
 				430CE49A1FCE8B930078804F /* Main.storyboard */,
-				43D4FA1A1FCF261800241E35 /* Reachability.h */,
-				43D4FA1B1FCF262100241E35 /* Reachability.m */,
+				43D4FA241FCF47E000241E35 /* Reachability.h */,
+				43D4FA251FCF47E900241E35 /* Reachability.m */,
 				430CE48C1FCE8B930078804F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -571,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D4FA261FCF47E900241E35 /* Reachability.m in Sources */,
 				43D4FA161FCEF2EE00241E35 /* RepositoryMO+CoreDataProperties.m in Sources */,
 				430CE4991FCE8B930078804F /* DetailViewController.m in Sources */,
 				430CE4961FCE8B930078804F /* MasterViewController.m in Sources */,
@@ -581,7 +582,6 @@
 				430CE4D21FCE9FD50078804F /* GCDataController.m in Sources */,
 				430CE4D81FCEA6E90078804F /* RepositoryModel.m in Sources */,
 				430CE4CC1FCE936B0078804F /* RepoTableViewCell.m in Sources */,
-				43D4FA1C1FCF262100241E35 /* Reachability.m in Sources */,
 				430CE4DB1FCEA7020078804F /* UserDetailsModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
