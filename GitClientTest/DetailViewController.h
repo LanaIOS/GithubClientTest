@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GitClientTest+CoreDataModel.h"
+#import "RepositoryMO+CoreDataClass.h"
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) Event *detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) RepositoryMO *detailItem;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+@property (weak, nonatomic) IBOutlet UILabel *loginLabel;
 
 @end
 
